@@ -12,6 +12,12 @@ var nex = $('#nex');
 var prev = $('#prev');
 /* End vars */
 
+	/* Menu */
+	var m_items = $('#menu nav ul li');
+
+	alert(m_items.width());
+	/* End menu */
+
 	/* Counter */
     $('#counter').countdown(new_date, function(event) {
     $(this).html(event.strftime(

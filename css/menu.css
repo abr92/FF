@@ -140,6 +140,7 @@ header{
 }
 #menu nav ul li a{
 	text-decoration: none;
+	transition:all .5s;
 }
 #menu nav ul li a:hover{
 	color: #00aeff;
