@@ -1,0 +1,45 @@
+#count{
+	display: block;
+	margin: auto;
+	max-width: 	680px;
+}
+#location, #counter{
+	display: inline-block;
+	vertical-align: top;
+}
+#location > div{
+	display: block;
+	padding: 15px 10px;
+	font-size: 20px;
+	margin: 5px 0px;
+}
+#location > div:nth-child(1){
+	margin-top: 0px;
+	border:solid 1px rgba(0, 228, 255, 0.2);
+-webkit-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+-moz-box-shadow:    4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+box-shadow:         4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+}
+#counter > div{
+	display: inline-block;
+	font-size: 20px;
+	text-align: center;
+	width: 75px;
+	margin-left:32px;
+	border:solid 1px rgba(0, 228, 255, 0.2);
+-webkit-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+-moz-box-shadow:    4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+box-shadow:         4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+}
+#counter > div:last-child{
+	margin-right: 0px;
+}
+#days,#hours,#minuts,#seconds{
+	display: block;
+	color: #00aeff;
+	font-size: 40px;
+	text-shadow:4px 4px 5px rgba(0, 0, 0, 1);
+}
+#counter div div{
+	margin: 15px 5px;
+}

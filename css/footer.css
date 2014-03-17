@@ -1,0 +1,22 @@
+#content-res > footer{
+	display: block;
+	background: url('img/line-footer-b.png')no-repeat top center , url('img/line-footer-b.png') no-repeat bottom center,black;
+	margin: 5% 0px 2% 0px;
+	padding: 20px 10px;
+}
+#content-res footer div{
+	display: inline-block;
+	vertical-align: top;
+	font-family: arial;
+	font-size: 10px;
+	color: white;
+}
+#content-res footer div a{
+	text-decoration: none;
+	color: white;
+	font-family: arial;
+	font-size: 10px;
+}
+#content-res footer div:last-child{
+	float: right;
+}
