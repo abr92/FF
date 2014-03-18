@@ -1,0 +1,64 @@
+#filter #base{
+	display: block;
+	position: relative;
+	width: 95%;
+	margin: auto;
+	background: black;
+	font-size: 20px;
+	border-radius: 5px 5px 0 0;
+	overflow: hidden;
+	padding: 10px 15px;
+}
+#filter #base p, #filter #base div{
+	display: inline-block;
+}
+#filter #base div{
+	display: block;
+	position: absolute;
+	right: 0;top: 0;bottom: 0;
+	background: red;
+	padding: 13px 5px;
+}
+#filter #selector{
+	display: block;
+	width: 95%;
+	margin: auto;
+	border-radius: 0px 0px 5px 5px;
+	background: white;
+	color: black;
+	padding: 10px 15px;
+}
+#photos{
+	display: block;
+	text-align: center;
+}
+#photos article{
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	background: black;
+	width: 47.5%;
+	margin: 1% 1%;
+	transition:all 1s;
+}
+#photos article #overlay{
+	display: block;
+	position: absolute;
+	background: rgba(0, 163, 255, 0.7);
+	opacity: 0;
+	top: 0;right: 0;bottom: 0;left: 0;
+	transition:all 1s;
+}
+#photos article:hover #overlay{
+	opacity: 1;
+}
+#photos article img{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+@media screen and ( max-width:550px ){
+	#photos article{
+		width: 95%;
+	}
+}
