@@ -1,6 +1,7 @@
 #count{
 	display: block;
 	margin: auto;
+	text-align: center;
 	max-width: 	680px;
 }
 #location, #counter{
@@ -42,4 +43,48 @@ box-shadow:         4px 4px 5px 0px rgba(0, 0, 0, 0.3);
 }
 #counter div div{
 	margin: 15px 5px;
+}
+@media screen and ( max-width: 650px ){
+	#location{
+		display: block;
+		text-align: center;
+	}
+	#location > div{
+		display: inline-block;
+	}
+	#location div:first-child{
+		border: none;
+		box-shadow: none;
+	}
+	#counter{
+		display: block;
+		text-align: center;
+	}
+	#counter div:first-child{
+		margin-left: 0px;
+	}
+}
+@media screen and ( max-width: 450px ){
+	
+	#location div{
+		padding: 5px 10px;
+	}
+	#counter div{
+		margin: 10px 1%;
+	}
+}
+@media screen and ( max-width: 350px ){
+	#days,#hours,#minuts,#seconds{
+		font-size: 80px;
+		text-align: center;
+	}
+	#counter div{
+		width: 45%;
+	}
+	#counter div > div{
+		display: block;
+		width: auto;
+		margin: auto;
+		text-align: center;
+	}
 }

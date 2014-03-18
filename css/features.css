@@ -1,5 +1,6 @@
 #features{
 	display: block;
+	text-align: center;
 }
 #features article{
 	display: inline-block;
@@ -37,4 +38,10 @@
 	background: black;
 	font-size: 20px;
 	padding: 15px 5px;
+}
+@media screen and ( max-width: 410px ){
+	#features article{
+		width: 90%;
+		margin: 8px 0;
+	}
 }
