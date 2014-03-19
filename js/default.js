@@ -14,6 +14,9 @@ var doc = $('body,img');
 			return;
 		}
 	});
+	$("body").on('click','#popup',function(){
+		popup_rem();
+	})
 
 	function popup_ini(data){
 
@@ -25,7 +28,9 @@ var doc = $('body,img');
 
 		function add_pop_img(data){
 			$('body').append('<section id="popup"><div><img src="'+$('img[data="'+ data +'"]').attr('src')+'"/></div></section>');
-
+			$('body').css({
+				"overflow" : "hidden"
+			});
 			var popup = $('#popup > div');
 			popup.css({
 				"margin-top": -popup.height()/2,
@@ -42,6 +47,9 @@ var doc = $('body,img');
 			});
 
 			$(window).resize(function(){
+				$('body').css({
+				"overflow" : "hidden"
+				});
 				popup = $('#popup > div');
 				popup.css({
 					"margin-top": -popup.height()/2,
@@ -49,11 +57,19 @@ var doc = $('body,img');
 				});
 			});			
 		}
-
-		/* Close popup */
-		/* $('#popup article').on('click','#close',function(){ */
-
 	}
+
+	/* Close popup */
+	/* $('#popup article').on('click','#close',function(){ */
+	function popup_rem(){
+		$('#popup').slideUp(1000,"easeInOutBack",function(){
+			$('#popup').remove();
+			$('body').css({
+				"overflow-y" : "auto"
+			});
+		});
+	}
+
 	/* End popup */
 
 	/* Galery */

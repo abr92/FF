@@ -3,6 +3,7 @@
 	position: fixed;
 	background: black;
 	top: 0;right: 0;bottom: 0;left: 0;
+	/*overflow-y:auto; */
 }
 #popup > div{
 	display: block;
@@ -17,5 +18,5 @@
 #popup div img{
 	width: 100%;
 	height: auto;
-	margin-bottom: -5px;
+	margin-bottom: -8px;
 }
