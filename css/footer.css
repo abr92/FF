@@ -20,15 +20,11 @@ body #content footer div a{
 	font-family: arial;
 	font-size: 10px;
 }
-<<<<<<< HEAD
 body #content footer div:first-child{
 	float: left;
 }
 body #content footer div:nth-child(2){
-=======
-body #content footer div:last-child{
->>>>>>> 2f48d1b679c130f834a2c6bcbb779402713a717a
-	float: right;
+float: right;
 }
 @media screen and ( max-width: 450px ){
 	body #content footer div{
