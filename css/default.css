@@ -9,6 +9,7 @@
 @import url('popup.css');
 @import url('description.css');
 @import url('music.css');
+@import url('vids.css');
 @font-face{
 	font-family: bbs_neue;
 	src: url(fonts/BebasNeue.ttf);
@@ -17,7 +18,7 @@
 	margin: 0px;
 	padding: 0px;
 	font-family: bbs_neue;
-	/*text-rendering: optimizeLegibility;*/
+	text-rendering: optimizeLegibility;
 	color: white;
 }
 html{
