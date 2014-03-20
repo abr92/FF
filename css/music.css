@@ -5,10 +5,37 @@
 	display: inline-block;
 	vertical-align: top;
 	position: relative;
-	text-align: left;
+	text-align: center;
 	vertical-align: top;
-	background: #0e0e0e;
+	background: black;
 	width: 48%;
 	margin: 1% .8%;
 	transition:all 1s;
+}
+#music article div img{
+  display: inline-block;
+  width: 30%;
+  margin-right: 1%;
+  margin-left: -1.5%;
+  height: auto;
+  vertical-align: middle;
+}
+#music article div h1{
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  font-size: 30px;
+  width: 67%;
+  height: auto;
+  margin: 0;
+}
+#music article audio{
+	width: 100%;
+}
+@media screen and ( max-width: 650px ){
+	#music article{
+		width: 90%;
+		height: auto;
+		margin: 1% 0;
+	}
 }
