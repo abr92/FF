@@ -15,7 +15,7 @@ body #content footer div{
 }
 body #content footer div a{
 	text-decoration: none;
-	white-space: nowrap;
+	/*white-space: nowrap;*/
 	color: white;
 	font-family: arial;
 	font-size: 10px;
@@ -35,5 +35,8 @@ float: right;
 
 	body #content footer{
 		text-align: center;
+	}
+	body #content footer div a{
+		font-size: 8px;
 	}
 }

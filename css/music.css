@@ -1,0 +1,14 @@
+#music{
+	text-align: center;
+}
+#music article{
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	text-align: left;
+	vertical-align: top;
+	background: #0e0e0e;
+	width: 48%;
+	margin: 1% .8%;
+	transition:all 1s;
+}

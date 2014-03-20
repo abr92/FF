@@ -224,15 +224,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 	#menu{
 		display: block;
 		float: none;
-		width: 250px;
 		margin: auto;
+	}
+	#top{
+		display: block;
+		float: none;
+		width: 250px;
+		margin: 5px auto;
 	}
 	#r-icon{
 		position: absolute;
 		width: 43px;height: 10px;
 		border-radius: 3px;
-		top: 30px;right: -3px;
+		top: 30px;right: 0px;
 		background-position: 6px center;
-		border: solid 1px rgba(0, 174, 255, 0.38);
+		border-top: solid 1px rgba(0, 174, 255, 0.38);
+		border-bottom: solid 1px rgba(0, 174, 255, 0.38);
+		border-left: solid 1px rgba(0, 174, 255, 0.38);
 	}
 }
