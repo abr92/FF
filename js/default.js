@@ -1,13 +1,17 @@
 $(document).ready(function(){
 /* Vars */
 var width = $(window).width();
-var doc = $(window);
+var doc = $('img');
 /* End vars */
 
 /* Body load */
-$('body').hide()
+$('img').css({
+	opacity: .3
+});
 doc.load(function(){
-	$('body').fadeIn('slow');
+	$('img').animate({
+		opacity : 1
+	},1000);
 });
 /* End body load */
 	
