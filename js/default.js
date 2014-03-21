@@ -296,10 +296,11 @@ doc.load(function(){
 
 		if( m_items > $(window).width() - 95 ){
 			nav.fadeOut('fast');	
-			nav.slideUp(1000,"easeInOutBack");
-			icon.slideDown(1000,"easeInOutBack");
+			nav.slideUp(1000,"easeInOutBack",function(){
+				icon.show();
+			});
 		}else{
-			icon.slideUp(800,"easeInOutBack");
+			icon.hide();
 			nav.slideDown(800,"easeInOutBack");
 		}
 
