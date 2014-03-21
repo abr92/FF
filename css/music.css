@@ -7,7 +7,7 @@
 	position: relative;
 	text-align: center;
 	vertical-align: top;
-	background: black;
+	background: #0a0a0a;
 	width: 48%;
 	margin: 1% .8%;
 	transition:all 1s;
@@ -24,7 +24,7 @@
   display: inline-block;
   vertical-align: middle;
   text-align: left;
-  font-size: 30px;
+  font-size: 25px;
   width: 67%;
   height: auto;
   margin: 0;
@@ -41,7 +41,7 @@
 		margin: 1% 0;
 	}
 	#music article div h1{
-		font-size: 25px;
+		font-size: 20px;
 		color: rgb(167, 167, 167);
 	}
 }

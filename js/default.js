@@ -39,10 +39,8 @@ doc.load(function(){
 
 		}
 		if( $(this).attr('vid') ){
-			vid_ini( $(this).attr('vid') )
-		}
-		else{
-			return;
+			/* Substring para quitar los 15 primeros caracteres (http://youtu.be/iwO8J-b3vO4) = iwO8J-b3vO4 */
+			vid_ini( $(this).attr('vid').substring(15) )
 		}
 		$(document).on('click','#close',function(){
 			popup_rem();
@@ -150,80 +148,85 @@ doc.load(function(){
 		}
 		
 		function add_pop_vid(data){
-			$('#popup > div').prepend('<div id="close"></div><img src="" />').load(
-			/* On load vid append function incrusted not call function not working */
-			$(function(){
-				/* Preformated css */
-				$('#popup').css({
-					opacity:0
-				});
-				$('#popup').show(1,function(){
-				var popup = $('#popup > div');
-				if( popup.height() > $(window).height() ){
-					popup.css({
-						"top" :0+'px',
-						"margin-top": 0,
-						"margin-left" : -popup.width()/2
-					});
-				}else{
-					popup.css({
-						"top":50+'%',
-						"margin-top": -popup.height()/2,
-						"margin-left" : -popup.width()/2
-					});
-				}
-				/* Preformated css */
-				$('#popup').hide(1,function(){
+			$('#popup > div').prepend('<div id="close"></div><iframe width="100%" src="https://www.youtube.com/embed/'+data+'?rel=0" frameborder="0" allowfullscreen></iframe>').load(
+				/* On load vid append function incrusted not call function not working */
+				$(function(){
+					/* Preformated css */
 					$('#popup').css({
-						opacity : 1
+						opacity:0
 					});
-					$('#popup > div #comments[data="'+data+'"]').show();
-				});
-				$('#popup').slideDown(1000,"easeInOutBack",function(){
+					$('#popup').show(1,function(){
+					var popup = $('#popup > div');
 					if( popup.height() > $(window).height() ){
-						popup.animate({
+						popup.css({
 							"top" :0+'px',
 							"margin-top": 0,
 							"margin-left" : -popup.width()/2
 						});
-						$('#popup').css({
-							"overflow-y" : "auto"
-						});
 					}else{
-						popup.animate({
+						popup.css({
 							"top":50+'%',
 							"margin-top": -popup.height()/2,
 							"margin-left" : -popup.width()/2
 						});
 					}
-				});
+					/* Preformated css */
+					$('#popup').hide(1,function(){
+						$('#popup').css({
+							opacity : 1
+						});
+						$('#popup > div iframe').css({
+							"height" : $(window).width()/1.5+'px'
+						});
+					});
+					$('#popup').slideDown(1000,"easeInOutBack",function(){
+						if( popup.height() > $(window).height() ){
+							popup.animate({
+								"top" :0+'px',
+								"margin-top": 0,
+								"margin-left" : -popup.width()/2
+							});
+							$('#popup').css({
+								"overflow-y" : "auto"
+							});
+						}else{
+							popup.animate({
+								"top":50+'%',
+								"margin-top": -popup.height()/2,
+								"margin-left" : -popup.width()/2
+							});
+						}
+					});
 
-				$(window).resize(function(){
-					if( p_active === 'on' ){
-						$('body').css({
-						"overflow" : "hidden",
-						"overflow-x" : "hidden"
-						});
-					}
-					popup = $('#popup > div');
-					if( popup.height() > $(window).height() ){
-						popup.css({
-							"top" :0+'px',
-							"margin-top": 0,
-							"margin-left" : -popup.width()/2
-						});
-						$('#popup').css({
-							"overflow-y" : "auto",
-							"overflow-x" : "hidden"
-						});
-					}else{
-						popup.css({
-							"top":50+'%',
-							"margin-top": -popup.height()/2,
-							"margin-left" : -popup.width()/2
-						});
-					}
-				});
+					$(window).resize(function(){
+						if( p_active === 'on' ){
+							$('#popup > div iframe').css({
+								"height" : $(window).width()/1.5+'px'
+							});
+							popup = $('#popup > div');
+							if( popup.height() > $(window).height() ){
+								$('body').css({
+									"overflow" : "hidden",
+									"overflow-x" : "hidden"
+								});
+								popup.css({
+									"top" :0+'px',
+									"margin-top": 0,
+									"margin-left" : -popup.width()/2
+								});
+								$('#popup').css({
+									"overflow-y" : "auto",
+									"overflow-x" : "hidden"
+								});
+							}else{
+								popup.css({
+									"top":50+'%',
+									"margin-top": -popup.height()/2,
+									"margin-left" : -popup.width()/2
+								});
+							}
+						}
+					});
 				});
 			}));
 			/* End on load vid append */
@@ -236,7 +239,7 @@ doc.load(function(){
 
 		$('#popup').slideUp(1000,"easeInOutBack",function(){
 			$('#popup').hide(function(){
-				$('#popup > div #close,#popup > div img').remove();
+				$('#popup > div #close,#popup > div img,#popup > div iframe').remove();
 				$('#popup > div #comments').hide();
 			});
 			$('body').css({
